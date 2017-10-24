@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app="DockerPlay" ng-controller="PlayController">
     <head>
-        <title>Docker Playground</title>
+        <title>Nomad Playground</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons" />
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
         <link rel="stylesheet" href="/assets/xterm.css" />
@@ -44,10 +44,9 @@
 
                 <md-toolbar class="md-theme-indigo">
                   <span class="clock">{{ttl}}</span>
-                  <md-button class="md-warn md-raised" ng-click="closeSession()">Close session</md-button>
+		  <a href="" class="nomad-btn" ng-click="closeSession()">Close session</a>
                   <div class="md-toolbar-tools">
                     <h1 class="md-toolbar-tools">Instances</h1>
-                    <templates-icon></templates-icon>
                     <settings-icon></settings-icon>
                   </div>
                 </md-toolbar>
@@ -103,8 +102,8 @@
                           </div>
                       </md-card-content>
                       <md-card-actions>
-                          <md-button class="md-warn md-raised" ng-click="deleteInstance(instance)" ng-disabled="isInstanceBeingDeleted">{{deleteInstanceBtnText}}</md-button>
-                          </md-card-actions>
+			  <a href="" class="nomad-btn nomad-btn-primary" ng-click="deleteInstance(instance)" ng-disabled="isInstanceBeingDeleted">{{deleteInstanceBtnText}}</a>
+                      </md-card-actions>
                   </md-card>
                   <md-card flex md-theme="default" md-theme-watch >
                       <div ng-show="uploadMessage" class="uploadStatus">
